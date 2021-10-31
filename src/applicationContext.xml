@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--  Define your beans here -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    <bean id="coach" class="com.learning.ioc.BadmintonCoach">
+        <constructor-arg ref="happyFortuneService" />
+        <property name="teamName" value="${coach.teamName}" />
+    </bean>
+    <bean id="happyFortuneService" class="com.learning.ioc.HappyFortuneService"/>
+    <bean id="randomFortuneService" class="com.learning.ioc.RandomFortuneService"/>
+    <bean id="coach2" class="com.learning.ioc.TrackCoach">
+    <property name="fortuneService" ref="happyFortuneService" />
+    </bean>
+
+    <bean id="coach3" class="com.learning.ioc.CricketCoach">
+        <property name="fortuneService" ref="randomFortuneService" />
+    </bean>
+
+</beans>
