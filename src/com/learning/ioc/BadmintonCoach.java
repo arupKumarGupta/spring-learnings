@@ -1,6 +1,6 @@
 package com.learning.ioc;
 
-public class BadmintonCoach  implements Coach{
+public class BadmintonCoach implements Coach {
 
     private String teamName;
     private FortuneService fortuneService;
@@ -24,6 +24,6 @@ public class BadmintonCoach  implements Coach{
 
     @Override
     public String getDailyFortune() {
-        return this.fortuneService.getFortune() + " "+ this.getTeamName();
+        return this.fortuneService.getFortune() + " " + this.getTeamName();
     }
 }
