@@ -52,4 +52,37 @@ Other bean scope
 >Note: 3,4 and 5 are for only Web Apps
 
 
+## Bean lifecycle
+
+    1. Container Started
+    2. Bean Instantiated
+    3. Dependencies Injected
+    4. Internal Spring Processing
+    5. Dev defined custom init Method
+    4. Now Bean is ready for use
+    5. Container is shutdown
+    6. Dev defined custom destroy method
+
+## Spring Annotations
+
+Annotations are basically metadata about the class
+
+Development process 
+
+    1. Enable Component scan in config file
+    2. Add @Component annotation to a class that is supposed to be a bean
+    3. Retrieve the bean from spring container
+
+## Autowiring dependencies
+
+    1. Constructor Autowiring
+    2. Setter Autowiring
+    3. Propery Autowiring
+
+## Bean Life Cycle Annotations
     
+    1. PostConstruct for init
+    2. PreDestroy for on destroy
+
+ - See RandomFortuneService.java for implementation
+> Note PreDestroy is not called for Prototype scoped Beans

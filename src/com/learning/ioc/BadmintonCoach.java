@@ -26,4 +26,12 @@ public class BadmintonCoach implements Coach {
     public String getDailyFortune() {
         return this.fortuneService.getFortune() + " " + this.getTeamName();
     }
+
+    public void init() {
+        System.out.println("startup stuff");
+    }
+
+    public void destroy() {
+        System.out.println("cleanup stuff");
+    }
 }

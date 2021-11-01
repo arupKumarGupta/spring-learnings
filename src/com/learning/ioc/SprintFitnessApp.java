@@ -1,5 +1,6 @@
 package com.learning.ioc;
 
+import com.learning.ioc.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SprintFitnessApp {
